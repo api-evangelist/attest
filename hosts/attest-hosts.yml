@@ -1,0 +1,118 @@
+generated: '2026-09-26'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 7
+  own: 6
+  other_domain: 1
+  platform: 0
+  roles:
+  - api
+  - docs
+  - other
+  - portal
+  - website
+hosts:
+- host: api.askattest.com
+  found_by:
+  - apis[]
+  - contract-discovery
+  - vendor-detect
+  types: []
+  serves:
+  - api
+  - cdn
+  vendor: cloudfront
+  registrable_domain: askattest.com
+  role: api
+  relation: own
+- host: careers.askattest.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: askattest.com
+  role: other
+  relation: own
+- host: dashboard.askattest.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: askattest.com
+  role: other
+  relation: own
+- host: developers.askattest.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - site-links
+  - namespace-probe
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - APIReference
+  serves:
+  - docs
+  title: Overview
+  status: 200
+  registrable_domain: askattest.com
+  role: docs
+  relation: own
+- host: developers.attest.com
+  found_by:
+  - pointer
+  types:
+  - DeveloperPortal
+  serves: []
+  registrable_domain: attest.com
+  role: portal
+  relation: other-domain
+- host: help.askattest.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - docs-index
+  - well-known
+  types:
+  - Support
+  - GettingStarted
+  serves:
+  - docs
+  registrable_domain: askattest.com
+  role: docs
+  relation: own
+- host: www.askattest.com
+  found_by:
+  - pointer
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Security
+  - Newsroom
+  - Website
+  - Documentation
+  - Pricing
+  - Blog
+  - TermsOfService
+  - PrivacyPolicy
+  serves:
+  - docs
+  - cdn
+  vendor: cloudflare
+  registrable_domain: askattest.com
+  role: website
+  relation: own

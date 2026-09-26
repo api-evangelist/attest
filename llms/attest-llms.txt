@@ -1,0 +1,18 @@
+# Attest Documentation
+
+> Documentation for Attest
+
+Append .md to any documentation page URL to get its markdown version.
+
+## Guides
+- [Overview](https://developers.askattest.com/docs/overview.md): The API and MCP gives you direct access to your study data, so you can analyse results, build dashboards, and integrate Attest into your existing workflows, without manual exports or logging into the…
+- [Authentication](https://developers.askattest.com/docs/authentication.md): To access Attest study data from an external tool, you need an API key. Learn how to generate one, use it in your requests, and rotate it if it's lost or compromised.
+- [Connecting via API](https://developers.askattest.com/docs/connecting-via-api.md): The base URL, endpoint paths, rate limits, and pagination behaviour you need to know before making your first Attest API request.
+- [Connecting via MCP](https://developers.askattest.com/docs/connecting-via-mcp.md): The Attest MCP server lets you query your survey results conversationally from your AI assistant — no code, no exports, no pivot tables.
+- [How to join structure and rounds](https://developers.askattest.com/docs/combining-structure-and-rounds.md): Structure and rounds are the two Attest API endpoints. Learn how they connect, what the key concepts mean, and how to join them to resolve respondent answers to question titles and labels.
+- [Connecting to BI Tools](https://developers.askattest.com/docs/connecting-to-bi-tools.md): Attest data can be connected to BI tools like Power BI and Tableau. Because the rounds endpoint returns nested JSON, you'll need to prepare the data into a flat table first, then connect your BI tool…
+
+## API Reference
+- [Get Study Structure](https://developers.askattest.com/reference/getstudystructure.md): Get a study's aggregated structure, ready to join directly to insights round data. Nodes and answer ids are expressed in template ids, so they join to a round's answers.  By default returns the full…
+- [Get Study Rounds](https://developers.askattest.com/reference/getroundsbystudy.md): Returns all of the rounds associated with a particular study
+- [List Studies](https://developers.askattest.com/reference/studies.md): Returns a lightweight list of studies the user has access to.  This endpoint is designed for list views and returns only essential fields, avoiding complex validation that could cause failures.

@@ -1,0 +1,20 @@
+generated: '2026-09-26'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://developers.askattest.com/docs/authentication.md
+sources:
+- https://developers.askattest.com/docs/authentication.md
+- https://developers.askattest.com/docs/authentication
+- https://help.askattest.com/en/articles/3494059-getting-started-with-your-first-survey
+- https://help.askattest.com/en/articles/5951282-getting-started-with-the-attest-platform
+description: Attest uses a simple API key authentication scheme.
+schemes:
+- type: apiKey
+  name: API Key
+  evidence: 'Pass your API key in the `X-API-Key` header on every request:'
+  location: header
+  header: X-API-Key
+  how_to_obtain: Log in to your Attest account, navigate to **API & MCP** on the main nav, scroll to the **API key** section, click **Create API
+    key**, then copy the generated key.
+note: No OAuth2, HTTP Bearer, or other authentication methods are documented.
+docs: https://developers.askattest.com/docs/authentication.md

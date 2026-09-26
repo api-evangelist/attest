@@ -1,0 +1,85 @@
+openapi: 3.1.0
+info:
+  title: Attest API
+  version: '2026-09-26'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-26: 2 operation(s) read from 2 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; Attest has published no machine-readable contract that the pipeline
+    could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 2
+    documentation: 0
+    pages-with-code: 2
+    pages-read: 2
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-26'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://developers.askattest.com/docs/connecting-via-api
+  - https://developers.askattest.com/docs/connecting-via-api.md
+servers:
+- url: https://api.askattest.com
+paths:
+  /studies/{studyid}/structure:
+    get:
+      operationId: get_studies_studyid_structure
+      tags:
+      - Studies
+      summary: Connecting via API
+      description: Fetch the structure of a study, optionally limiting the response to metadata only.
+      x-source: https://developers.askattest.com/docs/connecting-via-api.md
+      parameters:
+      - name: studyid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: node_ids
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Set to "none" to return only metadata (no question nodes).
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /study/{studyid}/rounds:
+    get:
+      operationId: get_study_studyid_rounds
+      tags:
+      - Study
+      summary: Connecting via API
+      description: Fetch respondent‑level round data for one or more surveys within a study.
+      x-source: https://developers.askattest.com/docs/connecting-via-api.md
+      parameters:
+      - name: studyid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: surveyIds
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Comma‑separated list of survey IDs to retrieve round data for.
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+components:
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-Key
+security:
+- apiKey: []
+tags:
+- name: Studies
+- name: Study
