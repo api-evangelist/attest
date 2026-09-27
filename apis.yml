@@ -79,17 +79,26 @@ common:
   url: https://www.askattest.com/legal/privacy-policy
 
 apis:
-- aid: attest:attest-api
-  name: Attest API
-  description: 'Attest API as documented publicly: 2 operations. Contract generated from the documentation by API Evangelist (2026-09-26); not
-    the provider''s own document.'
+- aid: attest:attest-studies-api
+  name: Attest Studies API
+  description: The Studies API from Attest — 1 operation(s) for studies.
   humanURL: https://developers.askattest.com/docs/connecting-via-api
   baseURL: https://api.askattest.com
+  tags:
+  - Studies
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/attest-openapi-generated.yml
-    x-provenance: generated
-
+    url: openapi/attest-studies-api-openapi.yml
+- aid: attest:attest-study-api
+  name: Attest Study API
+  description: The Study API from Attest — 1 operation(s) for study.
+  humanURL: https://developers.askattest.com/docs/connecting-via-api
+  baseURL: https://api.askattest.com
+  tags:
+  - Study
+  properties:
+  - type: OpenAPI
+    url: openapi/attest-study-api-openapi.yml
 x-coverage:
   state: unreadable
   reason: no-machine-readable-spec
