@@ -44,6 +44,8 @@ maintainers:
   email: info@apis.io
 
 common:
+- type: Plans
+  url: plans/attest-plans-pricing.yml
 - url: https://www.askattest.com/blog/feed/
   type: BlogRSS
 - type: Spectral
