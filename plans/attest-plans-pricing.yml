@@ -42,3 +42,43 @@ plans:
   period: none
   unit: credits
   included_quota: Over 400,000+ credits
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - metered
+  units:
+  - credit
+  plans:
+  - name: Basic
+    access: other
+    model: metered
+    model_how: derived
+    units:
+    - credit
+    periods:
+    - none
+  - name: Standard
+    access: other
+    model: metered
+    model_how: derived
+    units:
+    - credit
+    periods:
+    - none
+  - name: Elite
+    access: other
+    model: metered
+    model_how: derived
+    units:
+    - credit
+    periods:
+    - none
+  - name: Custom
+    access: other
+    model: metered
+    model_how: derived
+    units:
+    - credit
+    periods:
+    - none
